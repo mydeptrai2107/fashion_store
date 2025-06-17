@@ -2,6 +2,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:ecommerce_app/respository/components/app_styles.dart';
 import 'package:ecommerce_app/view/admin/admin_order_page.dart';
 import 'package:ecommerce_app/view/admin/admin_product_page.dart';
+import 'package:ecommerce_app/view/admin/admin_revenue_page.dart';
 import 'package:ecommerce_app/view/admin/admin_user_page.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,7 @@ class _AdminHomePageState extends State<AdminHomePage> {
     AdminProductScreen(),
     AdminOrderListScreen(),
     AdminUserListScreen(),
+    RevenueStatsScreen()
   ];
   int itemindex = 0;
 
@@ -50,6 +52,10 @@ class _AdminHomePageState extends State<AdminHomePage> {
             Icon(
               Icons.person,
               color: itemindex == 2 ? Colors.white : null,
+            ),
+            Icon(
+              Icons.monetization_on_rounded,
+              color: itemindex == 3 ? Colors.white : null,
             )
           ],
         ),
