@@ -219,46 +219,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 );
               }),
             ),
-            Center(
-              child: Padding(
-                padding: EdgeInsets.only(top: screenheight * 0.023),
-                child: InkWell(
-                    onTap: () {},
-                    child: Stack(
-                      children: [
-                        Container(
-                          height: 50,
-                          width: 335,
-                          decoration: BoxDecoration(
-                            color: const Color(0xffF7F7F9),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(15),
-                            ),
-                          ),
-                          child: const Center(
-                            child: Text(
-                              '  Đăng nhập với Goole',
-                              style: TextStyle(
-                                fontFamily: 'Raleway-SemiBold',
-                                color: Color(0xff2B2B2B),
-                                fontSize: 14,
-                              ),
-                            ),
-                          ),
-                        ),
-                        const Padding(
-                          padding: EdgeInsets.only(left: 64, top: 10),
-                          child: Image(
-                            height: 30,
-                            image: AssetImage(
-                              'images/googlelogo.png',
-                            ),
-                          ),
-                        ),
-                      ],
-                    )),
-              ),
-            )
           ],
         ),
       ),

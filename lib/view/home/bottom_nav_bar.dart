@@ -241,9 +241,11 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
                     onTap: () async {
                       await favprovider.deleteItems();
                       auth.signOut().then((value) {
+                        if (!context.mounted) return;
                         Navigator.pushNamed(context, RouteNames.pageViewScreen);
                       });
-                      GoogleSignIn().signOut().then((value) {
+                      GoogleSignIn.instance.signOut().then((value) {
+                        if (!context.mounted) return;
                         Navigator.pushNamed(context, RouteNames.pageViewScreen);
                       });
                     },
